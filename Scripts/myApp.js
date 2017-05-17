@@ -3,6 +3,11 @@
     "use strict";
 
     var myApp = angular.module('myApp', ['ngRoute']);
+     
+    myApp.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+    }]);
+     
     //config routing
     myApp.config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix('');
