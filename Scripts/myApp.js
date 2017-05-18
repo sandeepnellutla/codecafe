@@ -5,8 +5,14 @@
     var myApp = angular.module('myApp', ['ngRoute']);
      
     myApp.config(['$qProvider', function ($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
+        $qProvider.errorOnUnhandledRejections(false);
     }]);
+     
+     myApp.config([
+        '$interpolateProvider', function($interpolateProvider) {
+            return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+        }
+    ]);
      
     //config routing
     myApp.config(function ($routeProvider, $locationProvider) {
