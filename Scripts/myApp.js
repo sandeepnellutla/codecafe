@@ -28,7 +28,7 @@
     myApp.controller("blogController", function ($scope, $http) {
         $scope.errorstatus = '';
 
-        $http.get('/blogdata.json')
+        $http.get('/Scripts/blogdata.json')
            .then(function (response) {
                $scope.blogs = response.data;
            })
