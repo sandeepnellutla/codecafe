@@ -27,7 +27,7 @@
 
     myApp.controller("blogController", function ($scope, $http) {
         $scope.errorstatus = '';
-        $scope.blogs = JSON.parse('/Scripts/blogdata.json');
+        $scope.blogs = JSON.parse('blogdata.json');
         
         //$http.get('/Scripts/blogdata.json')
         //   .then(function (response) {
