@@ -27,12 +27,11 @@
 
     myApp.controller("blogController", function ($scope, $http) {
         $scope.errorstatus = '';
-        $scope.blogs = JSON.parse('blogdata.json');
         
-        //$http.get('/Scripts/blogdata.json')
-        //   .then(function (response) {
-        //       $scope.blogs = response.data;
-        //   })
+        $http.get('https://github.com/sandeepnellutla/codecafe/blob/master/blogdata.json')
+           .then(function (response) {
+               $scope.blogs = response.data;
+           })
 
 
     });
