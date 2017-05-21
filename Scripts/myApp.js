@@ -27,11 +27,12 @@
 
     myApp.controller("blogController", function ($scope, $http) {
         $scope.errorstatus = '';
-
-        $http.get('/Scripts/blogdata.json')
-           .then(function (response) {
-               $scope.blogs = response.data;
-           })
+        $scope.blogs = JSON.parse('/Scripts/blogdata.json');
+        
+        //$http.get('/Scripts/blogdata.json')
+        //   .then(function (response) {
+        //       $scope.blogs = response.data;
+        //   })
 
 
     });
