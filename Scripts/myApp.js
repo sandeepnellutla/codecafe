@@ -39,7 +39,7 @@
     myApp.controller("blogController", function ($scope, $http) {
         $scope.errorstatus = '';
 
-        $http.get('../codecafe/blogdata.json')
+        $http.get('/codecafe/blogdata.json')
            .then(function (response) {
                 alert(response.data);
                $scope.blogs = response.data;
